@@ -16,33 +16,39 @@ class Player {
         int lightY = in.nextInt(); // the Y position of the light of power
         int initialTX = in.nextInt(); // Thor's starting X position
         int initialTY = in.nextInt(); // Thor's starting Y position
-
+	
+		int thorX = initialTX;
+        int thorY = initialTY;
+		//in.nextLine();
+	
         // game loop
         while (true) {
+			//in.nextLine();
             int remainingTurns = in.nextInt();
-            int thorX = initialTX;
-            int thorY = initialTY;
+          
             
-            String direction = "";
-           // String directionY = "";
-            
-            if (thorX > lightX){
-                direction = "W";
-                thorX--;
+            String direction = "";	   
+		    if (thorY < lightY){
+                direction = "S";
+                thorY++;
             }
-            else if (thorX <lightX){
-                direction = "E";
+            
+			else if (thorY > lightY){
+                direction = "N";
+                thorY--;;
+            }
+         
+			if (thorX < lightX){
+                direction += "E";
                 thorX++;
             }
+            else if (thorX > lightX){
+                direction += "W";
+                thorX--;
+            }
+          
             
-             if (thorY > lightY){
-                direction = "N";
-                thorX--;;
-            }
-            else if (thorY < lightY){
-                direction = "S";
-                 thorX++;
-            }
+           
             
             //System.out.println(directionX);
             //System.out.println(directionY);
