@@ -28,20 +28,20 @@ class Player {
             
             if (thorX > lightX){
                 direction = "W";
-                thorX++;
+                thorX--;
             }
             else if (thorX <lightX){
                 direction = "E";
-                thorX--;
+                thorX++;
             }
             
              if (thorY > lightY){
                 direction = "N";
-                thorX++;;
+                thorX--;;
             }
             else if (thorY < lightY){
                 direction = "S";
-                 thorX--;
+                 thorX++;
             }
             
             //System.out.println(directionX);
